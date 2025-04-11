@@ -1,0 +1,647 @@
+body {
+    font-family: "Constantia", serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(248, 237, 223, 0.925);
+    color: #3a2c2a;
+    font-size: 20px;
+}
+
+.header-content {
+    background: url("/proyecto 5/img/img.jpg") no-repeat center center/cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 150px;
+    color: white;
+}
+
+h1 {
+    margin: 0%;
+}
+
+.texto {
+    position: relative;
+    left: 80px;
+    top: 0;
+    font-size: 40px;
+}
+
+.texto h2 {
+    font-size: 75px;
+    margin: 0%;
+}
+
+.header-content h3 {
+    font-size: 13px;
+    max-width: 600px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bda185;
+    color: #000000;
+    width: 100%;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background: url("hero-image.jpg") no-repeat center center/cover;
+    text-align: center;
+    padding: 200px 20px;
+    color: white;
+}
+
+.logo1 {
+    border-right: rgb(199, 140, 29) solid 2px;
+}
+
+.logo2 {
+    border-right: rgb(199, 140, 29) solid 2px;
+}
+
+.logo3 {
+    border-right: rgb(199, 140, 29) solid 2px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn1 {
+    padding: 10px;
+    background-color: rgb(255, 246, 230);
+    border-radius: 20px;
+}
+
+.btn {
+    padding: 10px;
+    background-color: rgb(192, 119, 59);
+    border-radius: 20px;
+    color: white;
+    width: 90px;
+}
+
+
+.primary {
+    background-color: #b99c73;
+    color: white;
+}
+
+.secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.features {
+    padding: 100px;
+    background-color: rgba(248, 237, 223, 0.925);
+    font-size: 25px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.features-grid p {
+    font-size: 14px;
+    max-width: 1000px;
+}
+
+.feature {
+    background: rgba(248, 237, 223, 0.89);
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.gallery h2 {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.gallery {
+    background-color: rgba(248, 237, 223, 0.89);
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+
+
+.container {
+    display: flex;
+    gap: 40px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    background-color: rgba(248, 237, 223, 0.89);
+}
+
+.btn3 {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ece0d1;
+    color: #3e2e1c;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.intro {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #b4814b;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.intro p {
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ece0d1;
+    color: #3e2e1c;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn.primary {
+    background-color: #4b2e22;
+    color: #fff;
+    border: #3a2c2a solid 2px;
+    border-radius: 20px;
+    width: 200px;
+}
+
+.menu {
+    flex: 2;
+}
+
+.hola {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    text-align: center;
+    width: 160px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.contenedor4 {
+    background: url("/proyecto 5/img/cafe8.jpg") no-repeat center center/cover;
+    padding: 130px;
+    color: white;
+}
+
+.btn2{
+padding: 10px;
+background-color: rgb(192, 119, 59);
+border-radius: 20px;
+color: white;
+width: 90px;
+}
+
+.btnprimary1{
+    padding: 10px;
+    margin: 10px;
+    background-color:  #4b2e22;
+    border-radius: 20px;
+    color: white;
+}
+
+
+
+
+.texto2 {
+    position: relative;
+    left: 80px;
+    top: 0;
+    max-width: 700px;
+    font-size: 20px;
+}
+
+.contenedor4 h2 {
+    font-size: 15px;
+}
+.contenedor4 h3 {
+    font-size: 15px;
+}
+
+
+.promotiont {
+    background-color: rgba(248, 237, 223, 0.89);
+    padding: 40px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.split-container {
+    width: 100%;
+    height: 400px; 
+    display: flex;
+}
+
+
+.coffee-side {
+    width: 50%;
+    background: #493121;
+    display: flex; 
+    align-items: center; 
+    padding-left: 90px; 
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.coffee-content {
+    width: 60%; 
+    color: white; 
+}
+
+
+.coffee-img {
+    height: 100%; 
+    width: auto; 
+    position: absolute;
+    right: 0px; 
+}
+
+.coffee-side h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.coffee-side h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+   
+}
+
+.coffee-side p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    max-width: 90%;
+}
+
+.coffee-side button {
+    background: white;
+    color: #6F4E37;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 20px;
+}
+
+.beige-side {
+    width: 50%;
+    background:#ebd7bc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.beige-side h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.beige-side h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.beige-side p {
+    font-size: 0.9em;
+    max-width: 60%;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.beige-side button {
+    background: #6F4E37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 20px;
+}
+
+  
+  .testimonios {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: rgba(248, 237, 223, 0.89);
+  }
+  
+  .persona {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .persona img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .barra-footer {
+    background-color: #4b2b12;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+  }
+  
+  .info .titulo {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .info .correo {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+  }
+  
+  .redes {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .icono {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    color: #4b2b12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+  }
+  
+  .circulo {
+    background-color: #d87e39;
+    color: white;
+  }
+  
+  .acciones {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .btn.blanco {
+    padding: 10px;
+    margin: 10px;
+    background-color:  #ffffff;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    width: 110px;
+  }
+  
+  .btn.naranja {
+    padding: 10px;
+    margin: 10px;
+    background-color:   #d87e39;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    width: 110px;
+  }
+
+
+
+
+  
+  @media (max-width: 400px) {
+    .header {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 8px;
+      padding: 0;
+    }
+  
+    .header-content {
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .texto {
+      left: 0;
+      font-size: 25px;
+    }
+  
+    .texto h2 {
+      font-size: 40px;
+    }
+  
+    .header-content h3 {
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    .btn1,
+    .btn2 {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .features {
+      padding: 20px;
+    }
+  
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .split-container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .coffee-side,
+    .beige-side {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .coffee-img {
+      display: none;
+    }
+  
+    .container {
+      flex-direction: column;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .intro, .menu {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  
+    .contenedor4 {
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .texto2 {
+      left: 0;
+      font-size: 16px;
+      max-width: 100%;
+    }
+  
+    .testimonios {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .barra-footer {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .acciones {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .btn.blanco,
+    .btn.naranja {
+      width: 80%;
+    }
+  }

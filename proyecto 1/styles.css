@@ -1,0 +1,121 @@
+h1 {
+    text-align: center; 
+    font-family: 'arial';
+     color: #3c3c3c; 
+     font-size: 30px;
+}
+
+hr {
+ border: 0;
+  height: 2px; 
+  line-height: 2px; 
+  background-color: #3c3c3c;
+   margin: 20px;
+}
+
+h2{
+    text-align: left;
+     font-family: 'arial';
+      color: #4c7ec1; 
+      font-size: 20px;
+       height: auto; 
+       margin: 25px;
+}
+
+p{
+    text-align: left;
+     font-family: 'arial';
+      color: #3c3c3c;
+       font-size: 18px;
+        margin: 25px;
+}
+
+.informacion-personal {
+    text-align: left;
+     font-family: 'arial';
+      color: #4c7ec1;
+       font-size: 20px; 
+       background-color: #dfe9f5;
+        border: rgb(189, 190, 190)  1px solid;
+         border-radius: 5px;
+          margin: 20px;
+           padding: 10px;
+}
+
+
+#container {
+    background-color: white;
+     border: rgb(207, 206, 206) 1px solid;
+      border-radius: 9px;
+       width: 700px;
+        height: auto; 
+        margin: auto; 
+        border-width: 3px;
+}
+
+.imagen-perfil {
+    text-align: left; 
+    font-family: 'arial'; 
+    color: #3c3c3c; 
+    font-size: 18px; 
+}
+
+.hobbies {
+    text-align: left; 
+    font-family: 'arial'; 
+    color: #4c7ec1;
+     font-size: 21px; 
+     background-color: #ffefdb; 
+     border: orangered 1px solid;
+      border-radius: 5px; 
+      margin: 20px;
+       padding: 10px;
+}
+
+.imagen {
+    text-align: left; 
+    font-family: 'arial';
+    color: #3c3c3c;
+     font-size: 18px;
+}
+
+.contacto {
+     font-family: 'arial'; 
+     color: #4c7ec1;
+      font-size: 22px; 
+      background-color: #e4f8e4;
+       border: forestgreen 1px solid;
+        border-radius: 5px;
+         margin: 20px;
+          padding: 10px;
+           padding-left: 20px;
+           text-align: left;}
+
+          
+          
+   
+
+
+body {
+    background-color: #2525251c;
+}
+
+.correo {
+    text-align: left;
+     font-family: 'arial';
+      color:   #4a9656  ;
+       font-size: 18px; 
+       margin: 20px;
+
+}
+
+.correo p{
+    text-decoration: none;
+    color:#4a9656;
+    padding: 5px;
+}
+
+.correo a {
+    text-decoration: none;
+    color:  #4a9656 ;
+}

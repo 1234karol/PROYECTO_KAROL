@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+.inicio {
+    background-color: rgb(46, 19, 119);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 30px;
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.inicio .p {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.cuadros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background-color: rgb(29, 29, 29);
+}
+
+.hijo {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(15, 15, 15, 0.3);
+    background-color: #fae6ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hijo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card,
+.card1,
+.card2,
+.card3 {
+    width: 90%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover,
+.card1:hover,
+.card2:hover,
+.card3:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 28px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: rgb(200, 194, 255);
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton:hover {
+    background-color: rgb(160, 150, 240);
+    transform: scale(1.05);
+}
+
+.barra {
+    background-color: rgb(46, 19, 119);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px 0;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    border-top: 3px solid rgb(0, 0, 0);
+}
+
+.barra .p {
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    .cuadros {
+        grid-template-columns: 1fr;
+    }
+
+    .hijo {
+        margin: 10px;
+    }
+
+    .card,
+    .card1,
+    .card2,
+    .card3 {
+        height: 200px;
+    }
+
+    .boton {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .barra .p {
+        font-size: 16px;
+    }
+}

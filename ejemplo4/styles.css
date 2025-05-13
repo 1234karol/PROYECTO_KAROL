@@ -1,44 +1,62 @@
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
 }
 
-header {
-    background: url('img/img1.jpg') no-repeat center center/cover;
-    height: 500px;
-    color: rgb(252, 252, 252);
+body {
+    background-color: #87878761;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.containerp{
+    width: 100%;
+}
+
+.div1 {
+    background-image: url(./img/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 30px 20px;
+    color: white;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
+}
+.cv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.cv button {
+    background-color: rgb(0, 170, 255);
+    color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }
 
-.header-content h1 {
-    margin: 0;
-    font-size: 50px;
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.header-content h2 {
-    font-size: 15px;
-    color: rgb(216, 216, 216);
-}
-
-.header-content {
-    position: relative;
-    left: 50px;
-    top: 90px;
-}
-
-.text {
-    position: relative;
-    left: 1300px;
-    top: 100px;
-}
-
-a {
-    color: #409cfd;
+.subtitulo {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #bbb1b1;
 }
 
 .btn {
@@ -71,19 +89,47 @@ a {
     height: 25px;
 }
 
-.botones {
+/* Barra de navegación - Versión Desktop */
+.div2 {
+    background-color: #e8e8e8;
+    padding: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
-    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-#minboto {
-    height: 50px;
-    width: 190px;
-    background-color: #ffffff;
-    border-color: rgb(255, 255, 255);
+.botons {
+    display: flex;
+    gap: 10px;
+}
+
+.imgperfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -125px;
+    z-index: 100;
+}
+
+.div2buton {
+    width: 160px;
+    height: 70px;
+    background-color: #e8e8e8;
+    color: black;
+    border: 1px solid rgba(160, 160, 160, 0.151);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+i{
+    color:rgb(0, 170, 255); ;
 }
 
 .profile {
@@ -101,23 +147,20 @@ a {
     display: flex;
     justify-content: space-between;
     border-radius: 0%;
-    padding: 1%;
 }
 
 .info, .personal-info, .expertise {
     background: rgb(248, 248, 248);
-    padding: 80px;
-    width: 30%;
+    padding: 20px;
+    width: 33%;
+    height: 500px;
     border-color: #409cfd;
 }
-
-.personal-info {
-    background: rgb(236, 236, 236);
-    padding: 80px;
-    width: 30%;
-    border-color: #409cfd;
+.info,.personal-info,.expertise{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-
 .redes img {
     width: 300px;
     object-fit: cover;
@@ -137,8 +180,8 @@ a {
 }
 
 .linea {
-    width: 40px;
-    margin-left: 5px;
+    padding: 5px;
+    width: 50px;
     height: 2px;
     background-color: rgb(8, 152, 248);
 }
@@ -159,7 +202,7 @@ a {
 }
 
 .linea1 {
-    width: 400px;
+    width: 90%;
     margin-left: 5px;
     background-color: rgb(243, 243, 243);
 }
@@ -170,11 +213,14 @@ a {
     margin: 0;
     font-size: 50px;
 }
-
+.resume-title{
+    padding: 20px;
+}
 .titulo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    justify-items: center;
 }
 
 .titulo2 {
@@ -194,38 +240,72 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     gap: 1em;
+    padding: 20px;
 }
 
 .card1{
-    padding: 5%;
-    grid-column:1/1 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    grid-column:1/1;
     grid-row: 1/4;
     border: 2px solid rgb(219, 219, 219);
 }
+.card1 h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    }
 .card2{
     padding: 5%;
     grid-column:3/2 ;
     grid-row: 1/5;
     border: 2px solid rgb(219, 219, 219);
 }
+.card2 h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    }
 .card3{
     padding: 5%;
     grid-column:3/3 ;
     grid-row: 1/3;
     border: 2px solid rgb(219, 219, 219);
 }
+.card3 h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    }
 .card4{
     padding: 5%;
     grid-column:1/1 ;
     grid-row: 4/6;
     border: 2px solid rgb(219, 219, 219);
 }
+.card4 h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    }
 .card5{
     padding: 5%;
     grid-column:3/3 ;
     grid-row: 3/6;
     border: 2px solid rgb(219, 219, 219);
 }
+.card5 h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    }
 
 .pc6{
     width: 95px; 
@@ -265,7 +345,7 @@ a {
 }
 
 .img {
-    width: 380px;
+    width: 100%;
     margin: 0;
     height: 100px;
 }
@@ -274,185 +354,247 @@ a {
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
+@media (max-width: 480px) {
+    .div1 {
+        padding: 20px 10px;
+        min-height: 400px;
+        text-align: center;
+    }
 
+    .cv {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-
-@media (max-width: 767px) {
-    header {
-        height: 350px;
+    .cv button {
         width: 100%;
+        margin: 0 auto;
     }
-p{
-    max-width: 410px;
-    min-width: none;
-}
-    .header-content h1 {
-        font-size: 35px;
-    }
-    .hola1{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
 
+    .div2 {
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
     }
-    .titulo{
-        display: flex;
-        flex-direction: row;
+
+    .div2buton {
+        width: 100%;
+        height: 50px;
+        font-size: 0.8rem;
         justify-content: space-between;
-    }
-.pc4{
-    text-align:right;
-}
-    .header-content h2 {
-        font-size: 12px;
+        padding: 0 10px;
     }
 
-    .header-content {
-        position: relative;
-        left: 20px;
-        top: 70px;
-    }
-
-    .text {
-        position: relative;
-        left: 40px;
-        top: 150px;
-    }
-
-    .btn {
-        width: 170px;
-        top: 120px;
-    }
-
-    .btn2 {
-        width: 170px;
+    .imgperfil {
+        width: 120px;
+        height: 120px;
+        top: -60px;
+        border-width: 6px;
     }
 
     .container {
         flex-direction: column;
+        gap: 20px;
     }
 
     .info, .personal-info, .expertise {
         width: 100%;
-        padding: 20px;
+        height: auto;
     }
 
     .resume-section {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
-   
-
-    .profile {
-      display: flex;
-      position: relative;
-      margin: 4px;
-      width: 150px;
-      height: 100px;
-      top: 3px;
+    .card1, .card2, .card3, .card4, .card5 {
+        grid-column: auto;
+        grid-row: auto;
+        padding: 15px;
     }
 
     .titulo, .titulo2 {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .botones {
-       height: 40px;
-       display: flex;
-       flex-direction: row;
-       align-items: center;
-       justify-content: center;
+    .pc, .pc2, .pc3, .pc4, .pc5, .pc6 {
+        width: 40px;
     }
 
-    #minboto {
-        height: 50px;
-        width: 190px;
-        background-color: #ffffff;
-        border-color: rgb(255, 255, 255);
-    }
-    
-}
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    header {
-        height: 400px;
+    .redes img {
+        width: 100%;
+        height: auto;
     }
 
-    .header-content h1 {
-        font-size: 20px;
+    .card6 {
+        width: 100%;
+        grid-template-columns: repeat(5, 1fr);
     }
 
-    .header-content h2 {
+    .linea2, .linea3 {
+        width: 100%;
+        height: 2px;
+    }
+
+    .btn2 {
+        width: 100%;
         font-size: 14px;
     }
-
-    .header-content {
-        position: relative;
-        left: 30px;
-        top: 90px;
+}
+@media (min-width: 481px) and (max-width: 680px) {
+    .div1 {
+        padding: 25px 15px;
+        min-height: 500px;
+        text-align: center;
     }
 
-    .text {
-        position: relative;
-        left: 60px;
-        top: 100px;
+    .cv {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
     }
 
-    .btn {
-        width: 170px;
-        top: 130px;
+    .cv button {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .div2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .botons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .div2buton {
+        width: 45%;
+        height: 60px;
+        font-size: 0.9rem;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .imgperfil {
+        width: 140px;
+        height: 140px;
+        top: -80px;
+        border-width: 8px;
     }
 
     .container {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .info, .personal-info, .expertise {
+        width: 100%;
+        height: auto;
+    }
+
+    .resume-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card1, .card2, .card3, .card4, .card5 {
+        padding: 15px;
+    }
+
+    .titulo, .titulo2 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pc, .pc2, .pc3, .pc4, .pc5, .pc6 {
+        width: 50px;
+    }
+
+    .redes img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card6 {
+        width: 100%;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .linea2, .linea3 {
+        width: 100%;
+        height: 2px;
+    }
+
+    .btn2 {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+
+
+@media (min-width: 681px) and (max-width: 1024px) {
+    .div2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .div2buton {
         width: 45%;
-        padding: 40px;
+        height: 60px;
+        font-size: 0.9rem;
+    }
+
+    .imgperfil {
+        width: 150px;
+        height: 150px;
+        top: -90px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .info, .personal-info, .expertise {
+        width: 100%;
+        height: auto;
     }
 
     .resume-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .card1, .card2, .card3, .card4, .card5 {
-        width: 100%;
-        margin: 10px 0;
+        grid-column: auto;
+        grid-row: auto;
     }
 
-    .profile {
-        width: 120px;
-        height: 120px;
-    }
-}
-
-
-@media (min-width: 1025px) {
-    .container {
+    .titulo, .titulo2 {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .info, .personal-info, .expertise {
-        width: 30%;
-        padding: 80px;
+    .card6 {
+        width: 100%;
     }
 
-    .resume-section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1em;
-    }
-
-    .card1, .card2, .card3, .card4, .card5 {
-        padding: 20px;
-    }
-
-    .profile {
-        width: 120px;
-        height: 120px;
+    .btn2 {
+        width: 100%;
     }
 }

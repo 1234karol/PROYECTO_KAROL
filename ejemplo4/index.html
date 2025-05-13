@@ -5,51 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyecto 4</title>
     <link rel="stylesheet" href="/ejemplo4/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
-    <header>
-        <div class="header-content">
-         
-            <h1>Karoll Luquez</h1>
-            <h2 >Web Designer / Developer</h2>
-            <button class="btn">  🏠︎Print Out My CV</button>
-           
-        </div>  
-     
-    </header>
+<div class="principal">
+     <div class="div1">
+            <div>
+                <h1>Johanson Doe</h1>
+                <h4 class="subtitulo">Web Designer / Developer</h4>
+            </div>
+            <div class="cv">
+                <button><img src="" alt=""><i id="print" class="fas fa-print print-icon" aria-label="Imprimir"></i>
+                    Print Out My CV</button>
+                <p>Do you have any questions? write to me at <a href="">contac@gmail.com</a></p>
+            </div>
+        </div>
  
   
-     <div class="botones">
-            <button id="minboto" href="#">Home🏠</button>
-            <button id="minboto" href="#">About🙍‍♂️</button>
-            <button  id="minboto"href="#">Resume ✉️</button>
-            <img class="profile" src="/ejemplo4/img/imx.jpg" alt="Profile Picture">
-         <button  id="minboto" href="#">Portfolio📷</button>
-            <button  id="minboto"href="#">Blog💬</button>
-            <button  id="minboto"href="#">Contact📲</button>
+        <div class="div2">
+            <div class="botons">
+                <button class="div2buton"><img src="" alt="">HOME<i class="fas fa-home"></i></i></button>
+                <button class="div2buton"><img src="" alt="">ABOUT<i class="fas fa-user"></i></button>
+                <button class="div2buton"><img src="" alt="">RESUME<i class="fas fa-file-alt"></i></button>
+            </div>
+            <div>
+                <img class="imgperfil" src="./img/imx.jpg" alt="">
+            </div>
+            <div class="botons">
+                <button class="div2buton"><img src="" alt="">PORFOLIO<i class="fas fa-briefcase"></i></button>
+                <button class="div2buton"><img src="" alt="">BLOG<i class="fas fa-blog"></i></button>
+                <button class="div2buton"><img src="" alt="">CONTACT<i class="fas fa-envelope"></i></button>
+            </div>
         </div>
+    
 
-    <section class="container">
-       
+    <section class="container">  
         <div class="info">
-             <hr class="linea">
-            <h2>Who am I?</h2>
+          <hr class="linea">  
+            <div>
+               <h2>Who am I?</h2> 
+            </div>
+             <div>
             <p>A Talented Web Designer / Developer Located In Our Lovely Earth</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p>I am a software developer passionate about creating web applications.
                  I love learning new programming languages and improving my skills.</p>
-            <button class="btn2">® Download My CV</button>
+             </div>
+             <div>
+                <button class="btn2">® Download My CV</button>
+             </div>
         </div>
 
         <div class="personal-info">
             <hr class="linea">
+            <div>
             <h2>Personal Info</h2>
+            </div>
+            <div>
             <p><strong>Birthday:</strong> 12/09/2007</p>
             <p><strong>Phone:</strong> +123-456-789-456</p>
             <p><strong>Email:</strong> support@mutationmedia.net</p>
             <p><strong>Skype:</strong> Johanson_Doe</p>
             <p><strong>Freelance:</strong> Available</p>
-            <p><strong>Address:</strong> 1234 Street Road, City Name, IN 567 890</p>
+            <p><strong>Address:</strong> 1234 Street Road, City Name, IN 567 890</p> 
+            </div>
             <div class="redes">
                 <img src="/ejemplo4/img/img3.png" alt="Profile Picture">
             </div>
@@ -58,52 +78,60 @@
 
         <div class="expertise">
             <hr class="linea">
-            <h2>My Expertise</h2>
-            <img class="pc"
-            src="/ejemplo4/img/img4.png" alt="Profile Picture">
-            <p><strong>Web Design:</strong> Lorem ipsum dolor sit amet.</p>
-            <hr class="linea1">
-            <img class="pc2"
-            src="/ejemplo4/img/img5.png" alt="Profile Picture">
-            <p><strong>Web Development:</strong> Sed do eiusmod tempor incididunt.</p>
-            <hr class="linea1">
-            <img class="pc3"
-            src="/ejemplo4/img/img6.png" alt="Profile Picture">
-            <p><strong>Mobile Design:</strong> Ut enim ad minim veniam.</p>
-            <hr class="linea1">
+            <div class="div-expertise">
+                 <h2>My Expertise</h2>
+    
+            </div>
+
+                <div>
+                    <img class="pc"src="/ejemplo4/img/img4.png" alt="Profile Picture">
+                    <p><strong>Web Design:</strong> Lorem ipsum dolor sit amet.</p>
+                    <img class="pc3"
+                    src="/ejemplo4/img/img6.png" alt="Profile Picture">
+                    <p><strong>Web Development:</strong> Sed do eiusmod tempor incididunt.</p>
+                    <img class="pc3"
+                    src="/ejemplo4/img/img6.png" alt="Profile Picture">
+                    <p><strong>Web Development:</strong> Sed do eiusmod tempor incididunt.</p>
+                </div>  
         </div>
     </section>
     <section class="resume">
+        <div class="resume-title">
         <hr class="linea">
+        <br>
         <h2>My Resume</h2>
+        </div>
+        
         <div class="resume-section">
+
             <div class="card1">
                 <hr class="linea">
-                <div class=" titulo">  <h3>Expertise</h3> 
-                    <img class="pc4"
-                    src="/ejemplo4/img/img7.png" alt="Profile Picture"> </div>
-                
-                <p><strong>Web Designer - Mutation Media</strong></p>
-                <p>Feb 2015 - <button class="boton">Current</button></p>
-                <p>The moon rose over the quiet town, casting a silver glow on the streets.
+                <div class=" titulo"> 
+                     <h3>Expertise</h3> 
+                    <img class="pc4" src="/ejemplo4/img/img7.png" alt="Profile Picture"> </div>
+                <div>
+                    <p><strong>Web Designer - Mutation Media</strong></p>
+                    <p>Feb 2015 - <button class="boton">Current</button></p>
+                    <p>The moon rose over the quiet town, casting a silver glow on the streets.
                      The air was cool, and all was still</p>  
-                <p><strong>Web Developer - Mutation Media</strong></p>
-                <p>(Sep 2015 - Sep 2017)</p>
-                <p>The ocean waves crashed gently against the shore, as the sky turned a soft pink at sunset.
-                     It was a peaceful moment</p>
+                    <p><strong>Web Developer - Mutation Media</strong></p>
+                    <p>(Sep 2015 - Sep 2017)</p>
+                    <p>The ocean waves crashed gently against the shore, as the sky turned a soft pink at sunset.
+                     It was a peaceful moment</p>  
+                    </div>
             </div>
+
             <div class="card2">
                 <hr class="linea">
-                <div>
-
-                </div>
-                <div class=" titulo"> <h3>Education</h3>
+                <div class=" titulo"> 
+                    <h3>Education</h3>
                     <div class=" titulo">
 
                         <img class="pc4"
                         src="/ejemplo4/img/images.png" alt="Profile Picture"> 
                     </div>
-                    </div>
+                </div>
+                <div>
                 <p><strong>Bachelor Degree - Mutation Media</strong></p>
                 <p>(Sep 2015 - Sep 2017)</p>
                 <p>The coffee was hot, its aroma filling the room. Outside, 
@@ -115,9 +143,10 @@
                 <p><strong>School of Science - Mutation Media</strong></p>
                 <p>(Sep 2015 - Sep 2017)</p>
                 <p>The stars sparkled above, their light reflecting in the calm lake below. 
-                    It felt like the world had paused for just</p>
-                
+                    It felt like the world had paused for just</p>  
+                </div>
             </div>
+
             <div class="card3">
                 <hr class="linea">
                 <div class=" titulo2"><h3>Skills</h3>
@@ -166,7 +195,7 @@
     
                     <img class="pc6"
                     src="/ejemplo4/img/images3.png" alt="Profile Picture"> </div>
-                    <div class ="img">
+                    <div class ="imgeducation">
                         <img src="/ejemplo4/img/img.jpg" alt="hola" class="img"></div>
                 </div>
 
@@ -177,7 +206,7 @@
                     <hr class="linea">
                     <div class=" titulo"><h3>Languages</h3>
                         <img class="pc6"
-                        src="/ejemplo4/img/images4.png" alt="Profile Picture"> </div>
+                        src="./img/images4.png" alt="Profile Picture"> </div>
                     <p>English</p>
                     <div class ="card6">
                         <div><hr class="linea2"></div>
@@ -206,7 +235,7 @@
             </div>
            
         </div>
+    </div>
     </section>
 </body>
 </html>
-

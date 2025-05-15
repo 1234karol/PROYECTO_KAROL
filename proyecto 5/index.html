@@ -1,223 +1,243 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Coffee Shop</title>
-        <link rel="stylesheet" href="/proyecto 5/styles.css" />
-    </head>
-    <body>
-        <header class="header">
-            <h1 class="logo">Coffee</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Location</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div class="header-content">
-            <div class="texto">
-                <h1>Savor the Perfect</h1>
-                <h2>Brew!</h2>
-                <h3>
-                    Bienvenidos a [Nombre de la cafetería], un lugar donde el
-                    buen café y una atmósfera acogedora se combinan para
-                    ofrecerte una experiencia única. Disfruta de nuestras
-                    bebidas especiales, repostería artesanal y un ambiente
-                    perfecto para relajarte o compartir con amigos. ¡Te
-                    esperamos!
-                </h3>
-                <button class="btn1">Vew more</button>
-                <button class="btn2">Menu</button>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="/proyecto 5/styles.css">
+    <style>
+        /* Estos estilos son de base ya que se repiten mucho y se pueden hacer llamado asi(ejemplo):
+         --side-padding: 80px;  y  padding: 15px var(--side-padding); */
+        :root {
+            --max-width: 1200px;
+            --content-padding: 20px;
+            --section-spacing: 60px;
+            --border-color: rgba(199, 140, 29, 0.3);
+            --primary-color: #bda185;
+            --secondary-color: #4b2e22;
+            --text-color: #3a2c2a;
+            --light-bg: rgba(248, 237, 223, 0.925);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Coffee</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Our </a></li>
+                <li><a href="#">Story</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="header-content">
+        <div class="texto">
+            <h1>Savor the Perfect</h1>
+            <h2>Brew!</h2>
+            <h3>
+                Bienvenidos a [Nombre de la cafetería], un lugar donde el
+                buen café y una atmósfera acogedora se combinan para
+                ofrecerte una experiencia única. Disfruta de nuestras
+                bebidas especiales, repostería artesanal y un ambiente
+                perfecto para relajarte o compartir con amigos. ¡Te
+                esperamos!
+            </h3>
+            <div class="hero-buttons">
+                <button class="btn btn1">Vew more</button>
+                <button class="btn btn2">Menu</button>
             </div>
         </div>
-        <section class="features">
-            <h2>Features$</h2>
-            <div class="features-grid">
-                <div class="logo1">
-                    <img src="/proyecto 5/img/img3 (2).png" alt="Café 1" />
-                    <h3>Espresso</h3>
-                    <p>
-                        El café espresso es una bebida fuerte y concentrada,
-                        obtenida al pasar agua caliente a alta presión a través
-                        de café molido finamente.
-                    </p>
-                </div>
+    </div>
 
-                <div class="logo2">
-                    <img class src="/proyecto 5/img/img2.png" alt="cafe 2" />
-                    <h3>Latte</h3>
-                    <p>
-                        El latte es una bebida de café que se hace con espresso
-                        y leche caliente, generalmente con una capa ligera de
-                        espuma de leche.
-                    </p>
-                </div>
-
-                <div class="logo3">
-                    <img class src="/proyecto 5/img/img5..PNG" alt="cafe 3" />
-                    <h3>Latte</h3>
-                    <p>
-                        El latte es una bebida de café que combina espresso con
-                        una mayor cantidad de leche caliente y una capa ligera
-                        de espuma.
-                    </p>
-                </div>
-
-                <div class="logo4">
-                    <img class src="/proyecto 5/img/img4 (2).png" alt="cafe 3" />
-                    <h3>Cold Brew</h3>
-                    <p>
-                        El cold brew es un café preparado en frío, sumergiendo
-                        café molido grueso en agua fría durante un largo
-                        periodo, generalmente entre 12 horas
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <div class="split-container">
-            <div class="coffee-side">
-                <div class="coffee-content">
-                    <h1>Why Choose</h1>
-                    <h2>Us?</h2>
-                    <p>
-                        What I love is coffee: its aroma that invites, its
-                        flavor that conquers and that spark of energy that
-                        revives. It is the ally of slow mornings and busy
-                        afternoons. A small pleasure that always tastes more.
-                    </p>
-                    <button>see more</button>
-                </div>
-                <img
-                    src="/proyecto 5/img/imgs.jpg"
-                    alt="Imagen vertical"
-                    class="coffee-img" />
-            </div>
-
-            <div class="beige-side">
-                <h3>try the delicious coffee</h3>
-                <h1>200 of from 10 am</h1>
+    <!-- Features Section -->
+    <section class="features">
+        <h2>FEATURES</h2>
+        <div class="features-grid">
+            <div class="feature-item logo1">
+                <img src="/proyecto 5/img/img2.png" alt="Espresso">
+                <h3>Espresso</h3>
                 <p>
-                    Good sweetened coffee, delicious is more than a thousand
-                    kisses, sweet it tastes like muscat wine, coffee, yes, it's
-                    coffee what I want! And whoever wants to give me a taste of
-                    an exquisite drink, come offer me a cup of coffee.
+                    El café espresso es una bebida fuerte y concentrada,
+                    obtenida al pasar agua caliente a alta presión a través
+                    de café molido finamente.
                 </p>
-                <button>see more</button>
+            </div>
+            <div class="feature-item logo2">
+                <img src="/proyecto 5/img/img2.png" alt="Latte">
+                <h3>Latte</h3>
+                <p>
+                    El latte es una bebida de café que se hace con espresso
+                    y leche caliente, generalmente con una capa ligera de
+                    espuma de leche.
+                </p>
+            </div>
+            <div class="feature-item logo3">
+                <img src="/proyecto 5/img/img2.png" alt="Latte">
+                <h3>Latte</h3>
+                <p>
+                    El latte es una bebida de café que combina espresso con
+                    una mayor cantidad de leche caliente y una capa ligera
+                    de espuma.
+                </p>
+            </div>
+            <div class="feature-item logo4">
+                <img src="/proyecto 5/img/img2.png" alt="Cold Brew">
+                <h3>Cold Brew</h3>
+                <p>
+                    El cold brew es un café preparado en frío, sumergiendo
+                    café molido grueso en agua fría durante un largo
+                    periodo, generalmente entre 12 horas.
+                </p>
             </div>
         </div>
+    </section>
 
-        <div class="container">
-            <section class="intro">
-                <div class="hola">
-                    <h4 class="label">☕︎ café temprano beneficios</h4>
-                    <h1>Morning Happy –</h1>
-                    <p>
-                        Siente la mañana desde el primer trago. Nuestra
-                        selección incluye los mejores granos tostados,
-                        combinados con leche cremosa y arte latte impecable.
-                        Mejora significativamente tu comienzo del día con
-                        nuestras bebidas.
-                    </p>
-                    <div class="buttons">
-                        <button class="btn3">Saber más</button>
-                        <button class="btn primary">Ver menú</button>
-                    </div>
-                </div>
-            </section>
-
-            <section class="menu">
-                <h2>Visítanos HOY</h2>
-                <div class="cards">
-                    <div class="card">
-                        <img src="/proyecto 5/img/late.jpg" alt="Coffee 1" />
-                        <h3>Capuccino Clásico</h3>
-                        <p>Barista A | $3.50</p>
-                    </div>
-                    <div class="card">
-                        <img src="/proyecto 5/img/cafe.jpg" alt="Coffee 2" />
-                        <h3>Latte de Arte</h3>
-                        <p>Barista B | $3.80</p>
-                    </div>
-                    <div class="card">
-                        <img src="/proyecto 5/img/mate.jpg" alt="Coffee 3" />
-                        <h3>Flat White Cremoso</h3>
-                        <p>Barista C | $4.10</p>
-                    </div>
-                    <div class="card">
-                        <img src="/proyecto 5/img/cafe.jpg" alt="Coffee 4" />
-                        <h3>Capuccino Canela</h3>
-                        <p>Barista D | $3.75</p>
-                    </div>
-                </div>
-            </section>
+    <!-- Split Section -->
+    <div class="split-container">
+        <div class="coffee-side">
+            <div class="coffee-content">
+                <h1>Why Choose</h1>
+                <h2>Us?</h2>
+                <p>
+                    What I love is coffee: its aroma that invites, its
+                    flavor that conquers and that spark of energy that
+                    revives. It is the ally of slow mornings and busy
+                    afternoons. A small pleasure that always tastes more.
+                </p>
+                <button class="btn btn1">see more</button>
+            </div>
+            <img src="/proyecto 5/img/imgs.jpg" alt="Imagen vertical" class="coffee-img" />
         </div>
-        <div class="contenedor4">
-            <div class="texto2">
-                <h1>Try it now in our cafeteria!</h1>
-                <h2>
-                    "Disfruta de cada sorbo, porque en cada taza encontramos el
-                    momento perfecto para hacer tu día más especial."
-                </h2>
-                <h3>
-                    "Más que café, una experiencia que te acompaña en cada
-                    momento del día."
-                </h3>
-                <button class="btnprimary1">Ordenar ahora</button>
-            </div>
+        <div class="beige-side">
+            <h3>try the delicious coffee</h3>
+            <h1>200 of from -10 am</h1>
+            <p>
+                Good sweetened coffee, delicious is more than a thousand
+                kisses, sweet it tastes like muscat wine, coffee, yes, it's
+                coffee what I want! And whoever wants to give me a taste of
+                an exquisite drink, come offer me a cup of coffee.
+            </p>
+            <button class="btn btn2">see more</button>
         </div>
+    </div>
 
-        <section class="testimonios">
-            <div class="persona">
-                <div class="logo4">
-                    <img src="/proyecto 5/img/taza.jpg" alt="Odies Amy Raefs" />
-                    <h3>Odies Amy Raefs</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Vitae, laboriosam.
-                    </p>
-                </div>
-            </div>
-            <div class="persona">
-                <div class="logo5">
-                    <img src="/proyecto 5/img/taza2.jpg" alt="Modanger Cheston" />
-                    <h3>Modanger Cheston</h3>
-                    <p>Gerente de Estrategias</p>
-                </div>
-            </div>
-            <div class="persona">
-                <div class="logo6">
-                    <img src="/proyecto 5/img/taza3.jpg" alt="Sodod O Ceshyo" />
-                    <h3>Sodod O Ceshyo</h3>
-                    <p>UX Designer</p>
+    <!-- Benefits Section -->
+    <div class="container">
+        <section class="intro">
+            <div class="hola">
+                <h4 class="label">☕︎ café temprano beneficios</h4>
+                <h1>Morning Happy –</h1>
+                <p>
+                    Siente la mañana desde el primer trago. Nuestra
+                    selección incluye los mejores granos tostados,
+                    combinados con leche cremosa y arte latte impecable.
+                    Mejora significativamente tu comienzo del día con
+                    nuestras bebidas.
+                </p>
+                <div class="buttons">
+                    <button class="btn btn3">Saber más</button>
+                    <button class="btn primary">Ver menú</button>
                 </div>
             </div>
         </section>
- 
-          <footer class="barra-footer">
+
+        <section class="menu">
+            <h2>Visítanos HOY</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="/proyecto 5/img/late.jpg" alt="Coffee 1" />
+                    <h3>Capuccino Clásico</h3>
+                    <p>Barista A | $3.50</p>
+                </div>
+                <div class="card">
+                    <img src="/proyecto 5/img/cafe.jpg" alt="Coffee 2" />
+                    <h3>Latte de Arte</h3>
+                    <p>Barista B | $3.80</p>
+                </div>
+                <div class="card">
+                    <img src="/proyecto 5/img/mate.jpg" alt="Coffee 3" />
+                    <h3>Flat White Cremoso</h3>
+                    <p>Barista C | $4.10</p>
+                </div>
+                <div class="card">
+                    <img src="/proyecto 5/img/cafe.jpg" alt="Coffee 4" />
+                    <h3>Capuccino Canela</h3>
+                    <p>Barista D | $3.75</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="contenedor4">
+        <div class="texto2">
+            <h1>Try it now in our cafeteria!</h1>
+            <h2>
+                "Disfruta de cada sorbo, porque en cada taza encontramos el
+                momento perfecto para hacer tu día más especial."
+            </h2>
+            <h3>
+                "Más que café, una experiencia que te acompaña en cada
+                momento del día."
+            </h3>
+            <button class="btn btnprimary1">Ordenar ahora</button>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonios">
+        <div class="testimonios-grid">
+            <div class="persona">
+                <img src="/proyecto 5/img/taza.jpg" alt="Odies Amy Raefs" />
+                <h3>Odies Amy Raefs</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Vitae, laboriosam.
+                </p>
+            </div>
+            <div class="persona">
+                <img src="/proyecto 5/img/taza2.jpg" alt="Modanger Cheston" />
+                <h3>Modanger Cheston</h3>
+                <p>Gerente de Estrategias</p>
+            </div>
+            <div class="persona">
+                <img src="/proyecto 5/img/taza3.jpg" alt="Sodod O Ceshyo" />
+                <h3>Sodod O Ceshyo</h3>
+                <p>UX Designer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="barra-footer">
+        <div class="footer-content">
             <div class="info">
-              <p class="titulo">Wooted evaluar exito</p>
-              <p class="correo">name@startup-creative.com</p>
+                <p class="titulo">Wooted evaluar exito</p>
+                <p class="correo">name@startup-creative.com</p>
             </div>
-        
             <div class="redes">
-              <div class="icono circulo"><i class="fas fa-circle"></i></div>
-              <div class="icono"><i class="fab fa-instagram"></i></div>
-              <div class="icono"><i class="fab fa-instagram"></i></div>
-              <div class="icono"><i class="fab fa-facebook-f"></i></div>
+                <div class="icono circulo"><i class="fas fa-circle"></i></div>
+                <div class="icono"><i class="fab fa-instagram"></i></div>
+                <div class="icono"><i class="fab fa-instagram"></i></div>
+                <div class="icono"><i class="fab fa-facebook-f"></i></div>
             </div>
-        
             <div class="acciones">
-              <button class="btn blanco">OBTENER</button>
-              <button class="btn naranja">ENVIAR</button>
+                <button class="btn blanco">OBTENER</button>
+                <button class="btn naranja">ENVIAR</button>
             </div>
-          </footer>
-        
-        </body>
-        </html>
+        </div>
+    </footer>
+
+</body>
+
+</html>

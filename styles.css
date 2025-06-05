@@ -1,384 +1,133 @@
-
-:root {
-  --pokemon-red: #FF0000;
-  --pokemon-blue: #3B4CCA;
-  --pokemon-yellow: #FFDE00;
-  --pokemon-light-red: #CC0000;
-  --pokemon-dark-blue: #2A52BE;
-  --pokemon-card-bg: #FFF9E5;
-  --pokemon-border: #3A3A3A;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Press Start 2P', cursive, 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #FFDE00 0%, #FF0000 100%);
-  min-height: 100vh;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://www.transparenttextures.com/patterns/pokeball-pattern.png');
-  opacity: 0.1;
-  z-index: -1;
+.inicio {
+    background-color: rgb(46, 19, 119);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 30px;
+    border-bottom: 3px solid rgb(0, 0, 0);
 }
 
-
-.barra {
-  background: linear-gradient(to right, var(--pokemon-red), var(--pokemon-light-red));
-  height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-bottom: 5px solid var(--pokemon-yellow);
-  margin-bottom: 30px;
-  position: relative;
-  overflow: hidden;
+.inicio .p {
+    font-size: 45px;
+    font-weight: bold;
 }
 
-.barra::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(255, 255, 255, 0.3) 50%, 
-    transparent 100%);
-  animation: shine 3s infinite;
+.cuadros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background-color: rgb(29, 29, 29);
 }
 
-@keyframes shine {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+.hijo {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(15, 15, 15, 0.3);
+    background-color: #fae6ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.img1 {
-  height: 90px;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-  transition: transform 0.3s;
+.hijo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-.img1:hover {
-  transform: scale(1.1) rotate(5deg);
+.card,
+.card1,
+.card2,
+.card3 {
+    width: 90%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-.padre {
-  background-color: var(--pokemon-card-bg);
-  border-radius: 20px;
-  border: 8px solid var(--pokemon-border);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3),
-              inset 0 0 15px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 900px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.padre::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 2px dashed var(--pokemon-yellow);
-  border-radius: 25px;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-
-
-.hijo1, .hijo2, .hijo3 {
-  background: var(--card-color, linear-gradient(to bottom, #F8F8F8, #E0E0E0)) !important;
-
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 3px solid var(--pokemon-border);
-  transition: all 0.3s ease;
-}
-
-.hijo1 {
-  grid-column: 1;
-  grid-row: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hijo2 {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.hijo3 {
-  grid-column: 1 / span 2;
-  grid-row: 2;
-}
-
-
-.pica {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(200,200,200,0.5) 100%);
-  border-radius: 50%;
-  border: 5px solid var(--pokemon-yellow);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  margin: 10px 0;
-  transition: all 0.3s ease;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.pica:hover {
-  transform: scale(1.05) translateY(-10px);
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
-}
-
-
-h1, h2, h3 {
-  color: var(--pokemon-dark-blue);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-  margin: 10px 0;
-  text-align: center;
-}
-
-h1 {
-  font-size: 1.8em;
-  color: var(--pokemon-red);
-  border-bottom: 3px solid var(--pokemon-yellow);
-  padding-bottom: 5px;
-  display: inline-block;
+.card:hover,
+.card1:hover,
+.card2:hover,
+.card3:hover {
+    transform: scale(1.05);
 }
 
 h2 {
-  font-size: 1.3em;
-  background-color: var(--pokemon-yellow);
-  padding: 5px 10px;
-  border-radius: 30px;
-  display: inline-block;
-  margin-bottom: 15px;
+    font-size: 28px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
 }
 
-h3 {
-  font-size: 1.1em;
+.boton {
+    display: inline-block;
+    background-color: rgb(200, 194, 255);
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-#boton, #debilidades {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin: 15px 0;
-}
-
-#boton button, #debilidades button {
-  border: none;
-  border-radius: 20px;
-  padding: 8px 15px;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.7em;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 3px 0 rgba(0,0,0,0.2);
-  transition: all 0.2s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-#boton button:hover, #debilidades button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 0 rgba(0,0,0,0.2);
-}
-
-#boton button:active, #debilidades button:active {
-  transform: translateY(1px);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-}
-
-
-.barra-contenedor {
-  background-color: #e0e0e0;
-  border-radius: 10px;
-  height: 20px;
-  margin: 10px 0;
-  overflow: hidden;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-  border: 2px solid var(--pokemon-border);
+.boton:hover {
+    background-color: rgb(160, 150, 240);
+    transform: scale(1.05);
 }
 
 .barra {
-  height: 100%;
-  border-radius: 8px;
-  background: linear-gradient(to right, #FF0000, #FF7F00);
-  transition: width 1s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 5px;
-  color: white;
-  font-size: 0.7em;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    background-color: rgb(46, 19, 119);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px 0;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    border-top: 3px solid rgb(0, 0, 0);
 }
 
-
-.hijo1:hover, .hijo2:hover, .hijo3:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-/* Añade estas reglas al inicio de tu CSS, después de los :root */
-
-/* Estilos para las imágenes laterales */
-.padre {
-  position: relative;
-  overflow: visible; /* Cambiado de hidden a visible */
-  padding: 40px 20px; /* Aumentamos el padding para espacio de las imágenes */
-}
-
-/* Imágenes decorativas laterales */
-.padre::before,
-.padre::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.7;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-  transition: all 0.3s ease;
-}
-
-/* Modifica estas reglas en tu CSS */
-
-.padre::before {
-  left: -170px;
-  background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png');
-  background-size: 80% 80%; 
-  background-color: transparent !important; 
-  border: none !important; 
-  box-shadow: none !important;
-}
-
-/* Añade esto para asegurar la transparencia */
-.padre::before, .padre::after {
-  background-color: transparent;
-  border: none;
-}
-
-/* Imagen derecha - Tipo Pokémon */
-.padre::after {
-     right: -170px;
-  background-image: url('/IMG/img1.png');
-}
-
-/* Efecto hover para las imágenes */
-.padre:hover::before,
-.padre:hover::after {
-  opacity: 0.9;
-  transform: translateY(-50%) scale(1.1);
-}
-
-/* Ajustes para responsive */
-@media (max-width: 768px) {
-  .padre::before,
-  .padre::after {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .padre::before {
-    left: -40px;
-  }
-  
-  .padre::after {
-    right: -40px;
-  }
-  
-  .padre {
-    padding: 30px 15px;
-  }
-}
-
-/* Ajuste para que el contenido no quede detrás de las imágenes */
-.hijo1, .hijo2, .hijo3 {
-  position: relative;
-  z-index: 2;
-  background: var(--card-color, linear-gradient(to bottom, #F8F8F8, #E0E0E0)) !important;
+.barra .p {
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
 }
 
 @media (max-width: 768px) {
-  .padre {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-  }
-  
-  .hijo1, .hijo2, .hijo3 {
-    grid-column: 1;
-  }
-  
-  .hijo1 { grid-row: 1; }
-  .hijo2 { grid-row: 2; }
-  .hijo3 { grid-row: 3; }
-  
-  .pica {
-    width: 150px;
-    height: 150px;
-  }
-  
-  h1 {
-    font-size: 1.5em;
-  }
-  
-  h2 {
-    font-size: 1.1em;
-  }
-}
+    .cuadros {
+        grid-template-columns: 1fr;
+    }
 
+    .hijo {
+        margin: 10px;
+    }
 
-@keyframes cardEntrance {
-  from {
-    opacity: 0;
-    transform: scale(0.8) rotate(-5deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0);
-  }
-}
+    .card,
+    .card1,
+    .card2,
+    .card3 {
+        height: 200px;
+    }
 
-.padre {
-  animation: cardEntrance 0.8s ease-out forwards;
+    .boton {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .barra .p {
+        font-size: 16px;
+    }
 }

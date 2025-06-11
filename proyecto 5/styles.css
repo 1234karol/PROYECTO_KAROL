@@ -436,20 +436,25 @@ body {
   background-color: #d87e39;
   color: white;
 }
- .coffee-side {
-    padding: 0px 0px 0px 100px;
-  }
+
 
 @media (max-width: 1200px) {
   :root {
     --side-padding: 80px;
   }
+  .coffee-side {
+    padding: 0px 0px 0px 10px;
+}
 }
 
 @media (max-width: 1024px) {
   :root {
     --side-padding: 60px;
   }
+  .coffee-side {
+    padding: 0px 0px 0px 10px;
+}
+
 
   .features-grid {
     grid-template-columns: repeat(2, 1fr);

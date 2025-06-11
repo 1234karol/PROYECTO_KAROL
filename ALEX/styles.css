@@ -311,74 +311,131 @@ h3 {
   transform: translateY(-50%) scale(1.1);
 }
 
-/* Ajustes para responsive */
-@media (max-width: 768px) {
-  .padre::before,
-  .padre::after {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .padre::before {
-    left: -40px;
-  }
-  
-  .padre::after {
-    right: -40px;
-  }
-  
-  .padre {
-    padding: 30px 15px;
-  }
+/* =========================
+   RESPONSIVE FIXES Y AJUSTES
+   ========================= */
+
+/* Evitar scroll horizontal */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-/* Ajuste para que el contenido no quede detrás de las imágenes */
-.hijo1, .hijo2, .hijo3 {
-  position: relative;
-  z-index: 2;
-  background: var(--card-color, linear-gradient(to bottom, #F8F8F8, #E0E0E0)) !important;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ajustar el contenedor principal */
+.padre {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* Reducción de padding e imágenes laterales en pantallas pequeñas */
+@media (max-width: 1024px) {
+  .padre::before,
+  .padre::after {
+    width: 90px;
+    height: 90px;
+  }
+
+  .padre::before {
+    left: -80px;
+  }
+
+  .padre::after {
+    right: -80px;
+  }
 }
 
 @media (max-width: 768px) {
   .padre {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
+    padding: 15px;
   }
-  
+
+  .padre::before,
+  .padre::after {
+    width: 60px;
+    height: 60px;
+    left: -20px;
+    right: -20px;
+  }
+
   .hijo1, .hijo2, .hijo3 {
     grid-column: 1;
   }
-  
+
   .hijo1 { grid-row: 1; }
   .hijo2 { grid-row: 2; }
   .hijo3 { grid-row: 3; }
-  
+
   .pica {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
-  
+
   h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
-  
+
   h2 {
-    font-size: 1.1em;
+    font-size: 1em;
+    padding: 4px 8px;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  #boton button,
+  #debilidades button {
+    font-size: 0.6em;
+    padding: 6px 12px;
+  }
+
+  .barra-contenedor {
+    height: 16px;
+  }
+
+  .barra {
+    font-size: 0.6em;
+    padding-right: 4px;
   }
 }
 
-
-@keyframes cardEntrance {
-  from {
-    opacity: 0;
-    transform: scale(0.8) rotate(-5deg);
+@media (max-width: 480px) {
+  .pica {
+    width: 120px;
+    height: 120px;
   }
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0);
-  }
-}
 
-.padre {
-  animation: cardEntrance 0.8s ease-out forwards;
+  h1 {
+    font-size: 1.2em;
+  }
+
+  h2 {
+    font-size: 0.9em;
+  }
+
+  .padre {
+    padding: 10px;
+  }
+
+  .barra-contenedor {
+    height: 14px;
+  }
+
+  #boton button,
+  #debilidades button {
+    font-size: 0.55em;
+  }
 }

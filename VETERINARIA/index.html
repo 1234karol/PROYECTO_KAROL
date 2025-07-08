@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Citas Veterinarias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1><i class="fas fa-paw"></i> Administrador de citas  <i class="fas fa-paw"></i></h1>
+            
+          <div class="filtros">
+    <div class="grupo-filtro">
+        <label for="filtro-estado">Filtrar por estado</label>
+        <select id="filtro-estado">
+            <option value="todos">Todas</option>
+            <option value="Abierta">Abierta</option>
+            <option value="Terminada">Terminada</option>
+            <option value="Anulada">Anulada</option>
+        </select>
+    </div>
+
+    <div class="grupo-busqueda-completa">
+        <label for="busqueda-input">Buscar por mascota o dueño</label>
+        <div class="grupo-busqueda-flex">
+            <input type="text" id="busqueda-input" placeholder="Buscar por mascota o dueño">
+            <button id="boton-buscar"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</div>
+
+            <button id="boton-agregar-cita" class="btn-primario">AGREGAR CITA</button>
+        </header>
+
+        <main>
+            <div id="contenedor-citas" class="grid-citas"></div>
+        </main>
+
+        <footer>
+            <p>Derechos reservados a Jagues6</p>
+        </footer>
+    </div>
+
+  
+    <div id="modal-cita" class="modal">
+        <div class="contenido-modal">
+            <span class="cerrar-modal">&times;</span>
+            <h2 id="titulo-modal">Guardar nueva cita</h2>
+            
+            <form id="formulario-cita">
+                <input type="hidden" id="id-cita">
+                
+                <div class="grupo-formulario">
+                    <label for="nombre-mascota">Nombre Mascota</label>
+                    <input type="text" id="nombre-mascota" >
+                </div>
+                
+                <div class="grupo-formulario">
+                    <label for="nombre-propietario">Propietario</label>
+                    <input type="text" id="nombre-propietario" >
+                </div>
+                
+                <div class="grupo-formulario">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" pattern="[0-9]+" >
+                </div>
+                
+                <div class="fila-formulario">
+                    <div class="grupo-formulario">
+                        <label for="fecha-cita">Fecha de cita</label>
+                        <input type="date" id="fecha-cita" >
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="hora-cita">Hora de cita</label>
+                        <input type="time" id="hora-cita" >
+                    </div>
+                </div>
+                
+                <div class="grupo-formulario">
+                    <label for="tipo-mascota">Tipo de mascota</label>
+                    <select id="tipo-mascota" >
+                        <option value="">Seleccione...</option>
+                        <option value="Perro">Perro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Pájaro">Pájaro</option>
+                        <option value="Conejo">Conejo</option>
+                        <option value="Hamster">Hamster</option>
+                        <option value="Tortuga">Tortuga</option>
+                        <option value="Pez">Pez</option>
+                        <option value="Serpiente">Serpiente</option>
+                        <option value="Iguana">Iguana</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="grupo-formulario">
+                    <label for="sintomas">Síntomas</label>
+                    <textarea id="sintomas" maxlength="400" ></textarea>
+                    <small id="contador-caracteres">0/400 caracteres</small>
+                </div>
+                
+                <div class="grupo-formulario" id="contenedor-estado">
+                    <label for="estado">Estado</label>
+                    <select id="estado">
+                        <option value="Abierta">Abierta</option>
+                        <option value="Terminada">Terminada</option>
+                        <option value="Anulada">Anulada</option>
+                    </select>
+                </div>
+                
+                <div class="acciones-modal">
+                    <button type="button" id="boton-cerrar" class="btn-secundario">CERRAR</button>
+                    <button type="submit" id="boton-guardar" class="btn-primario">GUARDAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="modal-confirmacion" class="modal">
+        <div class="contenido-modal confirmacion-modal">
+            <h3>Confirmar eliminación</h3>
+            <p>¿Estás seguro que deseas eliminar esta cita?</p>
+            <div class="acciones-confirmacion">
+                <button id="boton-cancelar" class="btn-secundario">Cancelar</button>
+                <button id="boton-confirmar" class="btn-peligro">Eliminar</button>
+            </div>
+        </div>
+    </div> 
+
+    <script src="js/aplicacion.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</body>
+</html>

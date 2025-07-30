@@ -1,3 +1,15 @@
+:root {
+    --primary-color: #4a2db7;
+    --primary-dark: #2e1377;
+    --secondary-color: #fae6ff;
+    --accent-color: #c8c2ff;
+    --accent-hover: #a096f0;
+    --text-dark: #1d1d1d;
+    --text-light: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,129 +17,219 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f8f9fa;
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
 .inicio {
-    background-color: rgb(46, 19, 119);
-    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: var(--text-light);
     text-align: center;
-    padding: 30px;
-    border-bottom: 3px solid rgb(0, 0, 0);
+    padding: 2.5rem 1rem;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .inicio .p {
-    font-size: 45px;
-    font-weight: bold;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+.inicio .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
 }
 
 .cuadros {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 40px;
-    background-color: rgb(29, 29, 29);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+    background-color: var(--text-dark);
 }
 
 .hijo {
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(15, 15, 15, 0.3);
-    background-color: #fae6ff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+    position: relative;
 }
 
 .hijo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.card,
-.card1,
-.card2,
-.card3 {
-    width: 90%;
+.card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card, .card1, .card2, .card3 {
+    width: 100%;
     height: 250px;
     background-size: cover;
     background-position: center;
-    text-align: center;
     border-radius: 10px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.card:hover,
-.card1:hover,
-.card2:hover,
-.card3:hover {
-    transform: scale(1.05);
+.card::before, .card1::before, .card2::before, .card3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.card:hover::before, .card1:hover::before, .card2:hover::before, .card3:hover::before {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 28px;
-    color: #000000;
+    font-size: 1.8rem;
+    color: var(--text-dark);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.card-text {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #555;
 }
 
 .boton {
     display: inline-block;
-    background-color: rgb(200, 194, 255);
-    color: rgb(0, 0, 0);
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-size: 16px;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
 }
 
 .boton:hover {
-    background-color: rgb(160, 150, 240);
-    transform: scale(1.05);
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
 }
 
 .barra {
-    background-color: rgb(46, 19, 119);
-    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: var(--text-light);
     text-align: center;
-    padding: 15px 0;
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    border-top: 3px solid rgb(0, 0, 0);
+    padding: 1.5rem 0;
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .barra .p {
-    font-size: 20px;
-    font-weight: normal;
-    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
 }
 
+/* Efectos adicionales */
+.hijo:nth-child(odd) {
+    animation: fadeInLeft 0.6s ease-out;
+}
+
+.hijo:nth-child(even) {
+    animation: fadeInRight 0.6s ease-out;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .inicio .p {
+        font-size: 2.2rem;
+    }
+    
     .cuadros {
+        padding: 1.5rem;
         grid-template-columns: 1fr;
     }
-
-    .hijo {
-        margin: 10px;
-    }
-
-    .card,
-    .card1,
-    .card2,
-    .card3 {
+    
+    .card, .card1, .card2, .card3 {
         height: 200px;
     }
-
-    .boton {
-        padding: 10px 15px;
-        font-size: 14px;
+    
+    h2 {
+        font-size: 1.5rem;
     }
+    
+    .boton {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
 
+@media (max-width: 480px) {
+    .inicio .p {
+        font-size: 1.8rem;
+    }
+    
     .barra .p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }

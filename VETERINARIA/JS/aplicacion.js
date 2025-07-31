@@ -121,12 +121,29 @@ document.addEventListener('DOMContentLoaded', function() {
         modalConfirmacion.classList.remove('show');
     }
     
-    function manejarEnvioFormulario(e) {
-        e.preventDefault();
-        
-        if (!validarFormulario()) {
-            return;  
-        }
+ function manejarEnvioFormulario(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // 1. Validación de Bootstrap
+    const form = e.currentTarget;
+    form.classList.add('was-validated');
+    
+    if (!form.checkValidity()) {
+        // Muestra un mensaje general si lo deseas
+        Swal.fire({
+            icon: 'error',
+            title: 'Formulario incompleto',
+            text: 'Por favor completa todos los campos requeridos',
+            confirmButtonColor: '#d33'
+        });
+        return;
+    }
+    
+    // 2. Tu validación personalizada adicional
+    if (!validarFormulario()) {
+        return;
+    }
 
         const nombreMascota = document.getElementById('nombre-mascota').value;
         const nombrePropietario = document.getElementById('nombre-propietario').value;
